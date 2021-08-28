@@ -11,6 +11,9 @@ npm install ejs@2.5.6 --save
 # -g to set this module globally
 npm install -g nodemon@1.10.2
 
+# -> solve module not found
+npm install --sav <module_name>
+
 # 3 -> using nodemon
 # >> nodemon app.js
 # >> nodemon app
