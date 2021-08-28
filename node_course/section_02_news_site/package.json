@@ -1,0 +1,15 @@
+{
+  "name": "news_site",
+  "version": "1.0.0",
+  "description": "News Site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Silva",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.17.1"
+  }
+}

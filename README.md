@@ -7,3 +7,5 @@ Node JS concepts
 ### Example 01
 - export modules
 
+### Example 02
+- using vendors modules
