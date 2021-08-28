@@ -1,23 +1,12 @@
 var app = require('./config/server')
 
-app.get('', function(req, res) {
+// COULD BE THIS WAY, TOO
+// var routeHome = require('./app/routes/home')
+// routeHome(app)
 
-	res.render('home/index')
-
-})
-
-app.get('/form_add_news', function(req, res) {
-
-	// render form_add_news.ejs
-	res.render('admin/form_add_news')
-
-})
-
-app.get('/news', function(req, res) {
-
-	res.render('news/news')
-
-})
+var routeHome = require('./app/routes/home')(app)
+var routeNews = require('./app/routes/news')(app)
+var routeFormAddNews = require('./app/routes/form_add_news')(app)
 
 app.listen(3000, function(){
 
