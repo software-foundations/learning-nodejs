@@ -1,12 +1,4 @@
-var express = require('express')
-
-const msg = require('./module_test')
-
-console.log(msg())
-
-var app = express() // search for ejs files in views directory
-
-app.set('view engine', 'ejs') // ejs module takes cares of view engine property
+var app = require('./config/server')
 
 app.get('', function(req, res) {
 
