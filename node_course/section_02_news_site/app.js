@@ -1,20 +1,25 @@
 var express = require('express')
 
-var app = express()
+var app = express() // search for ejs files in views directory
 
-// ejs module takes cares of view engine property
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs') // ejs module takes cares of view engine property
 
-app.get('/', function(req, res){
+app.get('', function(req, res) {
 
-	res.send('<html><body>Index</body></html>')
+	res.render('home/index')
 
 })
 
-app.get('/tecnology', function(req, res){
+app.get('/form_add_news', function(req, res) {
 
-	// res.send('<html><body>Tecnology</body><html>')
-	res.render('section/tecnology')
+	// render form_add_news.ejs
+	res.render('admin/form_add_news')
+
+})
+
+app.get('/news', function(req, res) {
+
+	res.render('news/news')
 
 })
 
