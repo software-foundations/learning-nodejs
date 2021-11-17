@@ -3,65 +3,49 @@
 	[
 		{
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-			"name": "learning-nodejs",			
-			"shell_cmd": "\"node\" \"$file\""
+			"name": "Console",						
+			"variants": [
+				{
+					"name": "Nodemon",
+					"shell_cmd": "\"nodemon\" \"$file\"",
+				},
+				{
+					"name": "Node",
+					"shell_cmd": "\"node\" \"$file\"",
+				}
+			]
 		},
 
 		{
-			"auto_close": false,
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"auto_close": false,
 			"focus": true,
-			"name": "learning-nodejs terminal",
+			"name": "Terminal",
 			"post_window_hooks":
 			[
 				[
 					"carry_file_to_pane",
 					{
-						"direction": "right"
+						"direction": "right",
 					}
 				]
-			],			
-			"shell_cmd": "\"node\" \"$file\"",
+			],						
 			"target": "terminus_open",
 			"timeit": true,
-			"title": "learning-nodejs terminal",
+			"title": "Terminal",
 			"variants":
 			[
 				{
-					"name": "Syntax Check",
-					"shell_cmd": "\"node\" \"${file}\""
+					"name": "Node",
+					"shell_cmd": "\"node\" \"${file}\"",
+				},
+				{
+					"name": "Nodemon",
+					"shell_cmd": "\"nodemon\" \"$file\"",
 				}
 			],
-			"working_dir": "$file_path"
+			"working_dir": "$file_path",
 		},
-
-		{
-			"auto_close": false,
-			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-			"focus": true,
-			"name": "learning-nodejs nodemon terminal",
-			"post_window_hooks":
-			[
-				[
-					"carry_file_to_pane",
-					{
-						"direction": "right"
-					}
-				]
-			],			
-			"shell_cmd": "\"nodemon\" \"$file\"",
-			"target": "terminus_open",
-			"timeit": true,
-			"title": "learning-node nodemon terminal",
-			"variants":
-			[
-				{
-					"name": "Syntax Check",
-					"shell_cmd": "\"nodemon\" \"${file}\""
-				}
-			],
-			"working_dir": "$file_path"
-		}
 	],
 
 
@@ -69,6 +53,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "../clone-coder-javascript/"
 		}
-	]
+	],
 }

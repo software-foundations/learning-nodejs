@@ -1,6 +1,7 @@
 node -v
 npm -v
 
+# udpate npm
 npm i loadash # locally
 
 # -> install nodemon and save it in package.json
@@ -13,4 +14,5 @@ npm install nodemon --save-dev
 # because nodemon uses only for development
 
 # -> global
+# sudo npm - -g <package_name>
 sudo npm i -g nodemon
