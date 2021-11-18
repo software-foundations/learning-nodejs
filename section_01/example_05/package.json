@@ -2,13 +2,16 @@
   "name": "example_05_project_employers",
   "version": "1.0.0",
   "description": "learning package.json",
-  "main": "index.js",
+  "main": "employees.js",
   "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "0.24.0"
+    "axios": "0.24.0",
+    "nodemon": "2.0.15"
   }
 }

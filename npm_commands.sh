@@ -30,3 +30,19 @@ npm i --save axios
 npm i --save-dev axios@0.24.0 -E
 npm install --save-dev axios@0.24.0 -E
 
+# -> package.json
+    # "axios": "0.24.0" // only this version
+    # // "axios": "^0.24.0" // 0.24.0 or higher
+    # // "axios": "~0.24.0" // 0.24 or in proximity
+
+# -> create node_modules by package.json
+npm i
+
+# -> create scripts in package.json
+  # "scripts": {
+  #   "start": "nodemon",
+  #   "dev": "nodemon",
+
+# both scripts execute the main file describe in package.json
+npm start # start is a default node command
+npm run dev # use run because dev is not a default node command
