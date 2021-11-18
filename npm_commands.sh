@@ -16,3 +16,17 @@ npm install nodemon --save-dev
 # -> global
 # sudo npm - -g <package_name>
 sudo npm i -g nodemon
+
+# initialize node project
+npm init
+npm init -y
+
+# -> install axios package and save it in package.json
+npm i --save axios
+
+# -> install axios in a specifc version
+# --save-dev => package not necessary in production
+# -E => install exactly 0.24.0
+npm i --save-dev axios@0.24.0 -E
+npm install --save-dev axios@0.24.0 -E
+
