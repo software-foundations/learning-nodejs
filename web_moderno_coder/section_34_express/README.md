@@ -22,6 +22,7 @@ npm init -y
 
 ```bash
 npm install --save express
+npm install --save body-parser
 ```
 
 # Install launchers

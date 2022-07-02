@@ -1,7 +1,18 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const greeting = require('./greetingMid')
 
 const app = express()
+
+// middleware - header text/plain
+app.use(bodyParser.text())
+
+// middleware - header application/json
+app.use(bodyParser.json())
+
+// middleware - header application/x-www-form-urlencoded
+// extende: true - to allow more data typs than the default specification
+app.use(bodyParser.urlencoded({extended: true}))
 
 // middleware
 app.use(greeting('Bruno'))
@@ -23,6 +34,11 @@ app.post('/body', (req, res) => {
 	req.on('end', () => {
 		res.send(body)
 	})
+})
+
+// Now, we use body-parser middleware
+app.post('/body-parser', (req, res) => {	
+	res.send(req.body)
 })
 
 // it comes first because it is more specific
