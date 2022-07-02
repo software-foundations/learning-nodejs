@@ -1,8 +1,12 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const greeting = require('./greetingMid')
+const userApi = require('./api/user')
 
 const app = express()
+
+app.post('/user', userApi.save)
+app.get('/user', userApi.get)
 
 // middleware - header text/plain
 app.use(bodyParser.text())
