@@ -12,6 +12,33 @@ app.use((req, res, next) => {
 	next()
 })
 
+// in POST, params should be passed in body
+app.post('/body', (req, res) => {
+
+	// We do this way 'cause we don't use body parser middleware
+	// we receive a stream of data
+	let body = ''
+	req.on('data', (chunk) => body += chunk)
+
+	req.on('end', () => {
+		res.send(body)
+	})
+})
+
+// it comes first because it is more specific
+app.get('/clients/report', (req, res) => {
+	let { complete, year} = req.query
+	console.log(complete, year)
+	res.send(`Client report: complete: ${complete} year: ${year}`)
+})
+
+// comes after the more specific
+// ... and beyond
+app.get('/clients/:id', (req, res) => {
+	res.send(`Client ${req.params.id}`)
+})
+
+
 // middleware
 app.use('/hello-use', (req, res, next) => {
 	console.log('/hello-use middleware')

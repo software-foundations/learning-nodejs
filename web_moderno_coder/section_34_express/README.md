@@ -78,3 +78,8 @@ pm2 kill
 - Express middlewares work with the pattern chain of responsability
 
 - Bodyparser, and cors are some common middlewares in express
+
+- In POST requests the parameters should be passed in the body of the request
+
+- However, In POST requests, the parameter can be passed in the query string
+
