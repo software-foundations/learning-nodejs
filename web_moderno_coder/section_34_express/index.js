@@ -5,6 +5,16 @@ const userApi = require('./api/user')
 
 const app = express()
 
+// product
+// already works
+// require('./api/product')(app, 'With param')
+
+
+// optional
+const productApi = require('./api/product')
+productApi(app, 'With param')
+
+// user
 app.post('/user', userApi.save)
 app.get('/user', userApi.get)
 

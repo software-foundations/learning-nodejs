@@ -3,6 +3,7 @@ function save(req, res) {
 }
 
 function get(req, res) {
+	console.log('>>>')
 	res.send('User > get')
 }
 

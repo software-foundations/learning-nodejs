@@ -84,3 +84,4 @@ pm2 kill
 
 - However, In POST requests, the parameter can be passed in the query string
 
+- We can pass parameters through modules by export a function in a module
