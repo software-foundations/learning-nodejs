@@ -74,3 +74,7 @@ pm2 kill
 
 - This allow only a http verb
 - <code>app.httpVerb(url, callbacks)</code>
+
+- Express middlewares work with the pattern chain of responsability
+
+- Bodyparser, and cors are some common middlewares in express
