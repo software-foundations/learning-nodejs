@@ -15,3 +15,13 @@ cp knowledge/versao-inicial/backend root/project/folder
 ```bash
 npm i
 ```
+
+# Creating Database
+
+```bash
+psql -U postgres
+```
+
+# consign
+
+- To inject dependencies
