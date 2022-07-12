@@ -56,6 +56,12 @@
 		},
 		{
 			"path": "../clone-coder-javascript/"
+		},
+		{
+			"path": "../learning-sql/"
+		},
+		{
+			"path": "../learning-nosql/mongodb/"
 		}
 	],
 }
